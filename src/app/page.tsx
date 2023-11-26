@@ -1,11 +1,8 @@
 "use server";
 
-import Nav from "./components/atoms/Nav";
-import Hero from "./components/molecules/Hero";
-import Section from "./components/atoms/Section";
+import { Nav, Hero, Section, Telegram } from "@/app/components";
 import Link from "next/link";
 import { Twitter } from "lucide-react";
-import Telegram from "./components/@icons/Telegram";
 
 export default async function Component() {
   return (

@@ -4,7 +4,7 @@ import { FC, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Twitter } from "lucide-react";
-import Telegram from "../@icons/Telegram";
+import { Telegram } from "@/app/components";
 import { getPrice } from "@/app/lib/price";
 
 const Nav: FC = () => {
