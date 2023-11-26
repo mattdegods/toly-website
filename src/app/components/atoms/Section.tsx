@@ -38,7 +38,7 @@ const Section: FC<Props> = ({
           />
         )}
         <div className="flex flex-col items-center md:items-start gap-5">
-          <h2 className="text-center md:text-left text-5xl md:text-4xl font-bold">
+          <h2 className="text-center md:text-left text-5xl md:text-4xl font-base-b">
             {title}
           </h2>
           {image && (

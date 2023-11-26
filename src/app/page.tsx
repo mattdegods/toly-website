@@ -9,7 +9,7 @@ import Telegram from "./components/@icons/Telegram";
 
 export default async function Component() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-900 text-white font-sans">
+    <div className="flex flex-col min-h-screen bg-gray-900 text-white">
       <div className="bg-gray-800">
         <Nav />
       </div>

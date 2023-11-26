@@ -29,7 +29,7 @@ const Nav: FC = () => {
           height={40}
           alt="toly coin image"
         />
-        <p className="font-semibold text-xl">$TOLY</p>
+        <p className="font-base-b text-xl">$TOLY</p>
         <p className="text-solana-green animate-pulse font-bold">{`$${price.toFixed(
           7
         )}`}</p>

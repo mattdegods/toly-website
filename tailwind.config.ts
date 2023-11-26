@@ -8,6 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        base: ["titillium", "-apple-system", "system-ui", "monospace"],
+        "base-b": ["titillium-bold", "-apple-system", "system-ui", "monospace"],
+        "base-black": [
+          "titillium-black",
+          "-apple-system",
+          "system-ui",
+          "monospace",
+        ],
+      },
       colors: {
         "solana-purple": "#9945FF",
         "solana-green": "#14F195",

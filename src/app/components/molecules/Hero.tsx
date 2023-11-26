@@ -15,7 +15,7 @@ const Hero: FC = () => {
         alt="toly coin image"
         priority
       />
-      <h1 className="text-[70px] md:text-[90px] leading-[88px] font-bold">
+      <h1 className="text-[70px] md:text-[90px] leading-[88px] font-base-b">
         $TOLY COIN
       </h1>
       <p>Launched in May 2023</p>
