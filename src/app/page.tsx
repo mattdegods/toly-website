@@ -10,7 +10,7 @@ import Telegram from "./components/@icons/Telegram";
 export default async function Component() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-white">
-      <div className="bg-gray-800">
+      <div className="w-full fixed top-0 bg-gray-800">
         <Nav />
       </div>
       <main className="flex-1">
@@ -97,8 +97,7 @@ export default async function Component() {
           </div>
         </Section>
       </main>
-      <footer className="p-5 flex items-center justify-between">
-        <p className="text-sm">© $TOLY</p>
+      <footer className="w-full max-w-[1600px] mx-auto p-5 flex items-center justify-between">
         <div className="flex items-center gap-5">
           <Link
             href="https://twitter.com/tolycoin"
@@ -117,6 +116,7 @@ export default async function Component() {
             <Telegram width={20} height={20} color="white" fill="white" />
           </Link>
         </div>
+        <p className="text-sm">© $TOLY</p>
       </footer>
     </div>
   );

@@ -8,7 +8,7 @@ import { smallClickAnimation } from "@/app/configs/framer.config";
 const Hero: FC = () => {
   return (
     <motion.section
-      className="flex flex-col items-center justify-center gap-2 py-24 px-5 text-center"
+      className="flex flex-col items-center justify-center gap-2 pb-24 pt-40 px-5 text-center"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
