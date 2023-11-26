@@ -48,17 +48,17 @@ export default async function Component() {
         >
           <div className="w-full flex flex-col space-y-4 text-justify">
             <p>
-              The developers own zero supply of TOLY. This was launched as an
+              The developers own zero supply of $TOLY. This was launched as an
               experiment by the devs.
             </p>
             <p>
-              The developers have very little to no involvement in TOLY&apos;s
+              The developers have very little to no involvement in $TOLY&apos;s
               direction. It is now entirely community-run, with a few members
               rising to drive the direction.
             </p>
             <p>
-              $TOLYcoin was the first TOLY native SPL launched. The developers
-              were able to mine the custom token address{" "}
+              $TOLY coin was the first TOLY-native SPL launched. The developers
+              were able to grind the custom token address{" "}
               <code className="bg-gray-600 text-xs">
                 <a
                   href="https://explorer.solana.com/address/to1yVXiNRMVVgS8i54Yjj3xB51MTorFrCMz7N8cirbK"
@@ -71,7 +71,7 @@ export default async function Component() {
               to pay homeage to Anatoly.
             </p>
             <p>
-              Anatoly himself has no affiliation with TOLY coin. The entire
+              Anatoly himself has no affiliation with $TOLY coin. The entire
               progress, marketing, and community managment of TOLY is funded by
               the community itself.
             </p>
@@ -98,12 +98,13 @@ export default async function Component() {
         </Section>
       </main>
       <footer className="p-5 flex items-center justify-between">
-        <p className="text-sm">© TOLY</p>
+        <p className="text-sm">© $TOLY</p>
         <div className="flex items-center gap-5">
           <Link
             href="https://twitter.com/tolycoin"
             target="_blank"
             rel="noreferrer noopener"
+            className="hover:opacity-80"
           >
             <Twitter size={20} color="white" fill="white" />
           </Link>
@@ -111,6 +112,7 @@ export default async function Component() {
             href="https://t.me/tolycoin"
             target="_blank"
             rel="noreferrer noopener"
+            className="hover:opacity-80"
           >
             <Telegram width={20} height={20} color="white" fill="white" />
           </Link>

@@ -39,6 +39,7 @@ const Nav: FC = () => {
           href="https://twitter.com/tolycoin"
           target="_blank"
           rel="noreferrer noopener"
+          className="hover:opacity-80"
         >
           <Twitter size={20} color="white" fill="white" />
         </Link>
@@ -46,6 +47,7 @@ const Nav: FC = () => {
           href="https://t.me/tolycoin"
           target="_blank"
           rel="noreferrer noopener"
+          className="hover:opacity-80"
         >
           <Telegram width={20} height={20} color="white" fill="white" />
         </Link>
