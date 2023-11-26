@@ -1,12 +1,25 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Twitter } from "lucide-react";
 import Telegram from "../@icons/Telegram";
+import { getPrice } from "@/app/lib/price";
 
 const Nav: FC = () => {
+  const [price, setPrice] = useState(0);
+
+  useEffect(() => {
+    const getCurrentPrice = async () => {
+      const price = await getPrice(
+        "to1yVXiNRMVVgS8i54Yjj3xB51MTorFrCMz7N8cirbK"
+      );
+      setPrice(price);
+    };
+    getCurrentPrice();
+  }, []);
+
   return (
     <header className="w-full p-5 flex justify-between items-center max-w-[1600px] mx-auto">
       <div className="flex items-center gap-2">
@@ -16,7 +29,10 @@ const Nav: FC = () => {
           height={40}
           alt="toly coin image"
         />
-        <p className="font-semibold text-xl">$TOLY COIN</p>
+        <p className="font-semibold text-xl">$TOLY</p>
+        <p className="text-solana-green animate-pulse font-bold">{`$${price.toFixed(
+          7
+        )}`}</p>
       </div>
       <nav className="flex items-center gap-5">
         <Link
