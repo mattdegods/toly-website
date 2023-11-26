@@ -7,7 +7,12 @@ import { smallClickAnimation } from "@/app/configs/framer.config";
 
 const Hero: FC = () => {
   return (
-    <section className="flex flex-col items-center justify-center gap-2 py-24 px-5 text-center">
+    <motion.section
+      className="flex flex-col items-center justify-center gap-2 py-24 px-5 text-center"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <Image
         src="/images/toly-img.png"
         width={250}
@@ -64,7 +69,7 @@ const Hero: FC = () => {
           </motion.button>
         </a>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
