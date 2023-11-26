@@ -43,7 +43,7 @@ export default async function Component() {
           image="/images/branding7.jpg"
           reverse
         >
-          <div className="w-full flex flex-col space-y-4 text-justify">
+          <div className="w-full flex flex-col space-y-4">
             <p>
               The developers own zero supply of $TOLY. This was launched as an
               experiment by the devs.
@@ -56,7 +56,7 @@ export default async function Component() {
             <p>
               $TOLY coin was the first TOLY-native SPL launched. The developers
               were able to grind the custom token address{" "}
-              <code className="bg-gray-600 text-xs">
+              <code className="bg-gray-600 hover:bg-gray-500 text-xs">
                 <a
                   href="https://explorer.solana.com/address/to1yVXiNRMVVgS8i54Yjj3xB51MTorFrCMz7N8cirbK"
                   target="_blank"
@@ -72,6 +72,21 @@ export default async function Component() {
               progress, marketing, and community managment of TOLY is funded by
               the community itself.
             </p>
+            <p>
+              $TOLY is run completely through charitable donations by our
+              community. Everything we have built so far is thanks to the
+              generosity and conviction of our Solana bulls. If you are
+              interested in helping $TOLY grow, you can send donations here:{" "}
+              <code className="bg-gray-600 hover:bg-gray-500 text-xs">
+                <a
+                  href="https://explorer.solana.com/address/BC5P6n7VNnnhbcjinaX2YVyeETBfY6mVztEvWgbG247w"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  BC5P6n7VNnnhbcjinaX2YVyeETBfY6mVztEvWgbG247w
+                </a>
+              </code>
+            </p>
           </div>
         </Section>
         <Section
@@ -79,12 +94,12 @@ export default async function Component() {
           id="tokenomics"
           image="/images/branding2.jpg"
         >
-          <div className="flex flex-col space-y-4 text-justify">
+          <div className="flex flex-col space-y-4">
             <p>Total supply: 500,000,000</p>
             <p>Fair Launched: 250,000,000</p>
             <p>Airdropped: 150,000,000</p>
             <p>
-              100,000,000 $TOLY was attempted to be burned on [DATE HERE].
+              100,000,000 $TOLY was attempted to be burned in November 2023.
               However, the main developer made a mistake and accidentally sent
               it to trash.sol. That led to a short-term sell-off. Today, $TOLY
               is now fully distributed and decentralized with little wallet

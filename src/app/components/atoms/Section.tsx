@@ -19,14 +19,11 @@ const Section: FC<Props> = ({
   image,
 }) => {
   return (
-    <section
-      className={`w-full py-24 px-10 lg:px-0 ${!reverse && "bg-gray-800"}`}
-      id={id}
-    >
+    <section className={`w-full bg-gray-800`} id={id}>
       <div
-        className={`flex items-center ${
+        className={`flex items-center border-b border-gray-900 py-24 px-10 lg:px-0 ${
           reverse && "flex-row-reverse"
-        } justify-center gap-6 max-w-4xl mx-auto text-justify`}
+        } justify-center gap-6 max-w-4xl mx-auto`}
       >
         {image && (
           <Image
