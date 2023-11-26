@@ -20,7 +20,7 @@ const Section: FC<Props> = ({
 }) => {
   return (
     <section
-      className={`w-full py-20 px-10 lg:px-0 ${!reverse && "bg-gray-800"}`}
+      className={`w-full py-24 px-10 lg:px-0 ${!reverse && "bg-gray-800"}`}
       id={id}
     >
       <div
@@ -34,10 +34,10 @@ const Section: FC<Props> = ({
             width={250}
             height={250}
             alt="toly branding"
-            className="rounded-full hidden md:block"
+            className="rounded-lg hidden md:block"
           />
         )}
-        <div className="flex flex-col items-center md:items-start gap-4">
+        <div className="flex flex-col items-center md:items-start gap-5">
           <h2 className="text-center md:text-left text-5xl md:text-4xl font-bold">
             {title}
           </h2>
@@ -47,7 +47,7 @@ const Section: FC<Props> = ({
               width={200}
               height={200}
               alt="toly branding"
-              className="rounded-full md:hidden"
+              className="rounded-lg md:hidden"
             />
           )}
           {children}

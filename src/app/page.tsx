@@ -3,11 +3,16 @@
 import Nav from "./components/atoms/Nav";
 import Hero from "./components/molecules/Hero";
 import Section from "./components/atoms/Section";
+import Link from "next/link";
+import { Twitter } from "lucide-react";
+import Telegram from "./components/@icons/Telegram";
 
 export default async function Component() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-white font-sans">
-      <Nav />
+      <div className="bg-gray-800">
+        <Nav />
+      </div>
       <main className="flex-1">
         <Hero />
         <Section title="Origin Story" id="origin" image="/images/branding3.jpg">
@@ -92,8 +97,24 @@ export default async function Component() {
           </div>
         </Section>
       </main>
-      <footer className="px-10 lg:px-0 py-2 flex justify-center items-center border-t border-gray-800">
+      <footer className="p-5 flex items-center justify-between">
         <p className="text-sm">© TOLY</p>
+        <div className="flex items-center gap-5">
+          <Link
+            href="https://twitter.com/tolycoin"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <Twitter size={20} color="white" fill="white" />
+          </Link>
+          <Link
+            href="https://t.me/tolycoin"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <Telegram width={20} height={20} color="white" fill="white" />
+          </Link>
+        </div>
       </footer>
     </div>
   );
