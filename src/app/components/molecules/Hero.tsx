@@ -22,19 +22,26 @@ const Hero: FC = () => {
       <p className="text-lg text-gray-400 max-w-2xl mx-auto">
         &quot;FUCK A ROLY, BUY SOME $TOLY&quot;
       </p>
-      <motion.button
-        className="border-4 border-black mt-8 px-5 py-2 bg-gradient-to-br from-solana-green to-solana-purple text-white rounded-lg"
-        {...smallClickAnimation}
-        onClick={() =>
-          window.open(
-            "https://jup.ag/swap/SOL-TOLY",
-            "_blank",
-            "noreferrer noopener"
-          )
-        }
+      <a
+        href="https://jup.ag/swap/SOL-TOLY"
+        target="_blank"
+        rel="noreferrer noopener"
       >
-        Buy on Jupiter
-      </motion.button>
+        <motion.button
+          className="border-4 border-black mt-8 px-6 py-3 bg-gradient-to-tr uppercase
+          to-solana-green from-solana-purple text-white font-bold rounded-xl flex items-center gap-2"
+          {...smallClickAnimation}
+        >
+          <Image
+            src="/images/jupiter-logo.svg"
+            width={24}
+            height={24}
+            alt="jupiter logo"
+            priority
+          />
+          <p>Swap on Jupiter</p>
+        </motion.button>
+      </a>
     </section>
   );
 };
