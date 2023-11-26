@@ -6,8 +6,8 @@ import { Twitter } from "lucide-react";
 
 export default async function Component() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-900 text-white">
-      <div className="w-full fixed top-0 bg-gray-800">
+    <div className="flex flex-col min-h-screen bg-black text-white">
+      <div className="w-full bg-gray-800">
         <Nav />
       </div>
       <main className="flex-1">
