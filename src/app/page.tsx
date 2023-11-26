@@ -10,7 +10,7 @@ export default async function Component() {
       <Nav />
       <main className="flex-1">
         <Hero />
-        <Section title="Origin" id="origin" image="/images/branding3.jpg">
+        <Section title="Origin Story" id="origin" image="/images/branding3.jpg">
           <p>
             $TOLY was born out of a conversation between two friends who have
             been in the Solana ecosystem for a few years now. Around the time, a
@@ -35,21 +35,26 @@ export default async function Component() {
             .
           </p>
         </Section>
-        <Section title="Facts" id="facts" image="/images/branding7.jpg" reverse>
-          <ol className="max-w-4xl mx-auto space-y-4 text-justify">
-            <li key={1}>
+        <Section
+          title="Hard Facts"
+          id="facts"
+          image="/images/branding7.jpg"
+          reverse
+        >
+          <div className="w-full flex flex-col space-y-4 text-justify">
+            <p>
               The developers own zero supply of TOLY. This was launched as an
               experiment by the devs.
-            </li>
-            <li key={2}>
+            </p>
+            <p>
               The developers have very little to no involvement in TOLY&apos;s
               direction. It is now entirely community-run, with a few members
               rising to drive the direction.
-            </li>
-            <li key={3}>
+            </p>
+            <p>
               $TOLYcoin was the first TOLY native SPL launched. The developers
               were able to mine the custom token address{" "}
-              <code className="bg-gray-600">
+              <code className="bg-gray-600 text-xs">
                 <a
                   href="https://explorer.solana.com/address/to1yVXiNRMVVgS8i54Yjj3xB51MTorFrCMz7N8cirbK"
                   target="_blank"
@@ -59,16 +64,16 @@ export default async function Component() {
                 </a>
               </code>{" "}
               to pay homeage to Anatoly.
-            </li>
-            <li key={4}>
+            </p>
+            <p>
               Anatoly himself has no affiliation with TOLY coin. The entire
               progress, marketing, and community managment of TOLY is funded by
               the community itself.
-            </li>
-          </ol>
+            </p>
+          </div>
         </Section>
         <Section
-          title="Tokenomics"
+          title="$TOLY Tokenomics"
           id="tokenomics"
           image="/images/branding2.jpg"
         >

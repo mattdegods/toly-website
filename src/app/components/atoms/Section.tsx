@@ -20,7 +20,7 @@ const Section: FC<Props> = ({
 }) => {
   return (
     <section
-      className={`py-20 px-10 lg:px-0 ${!reverse && "bg-gray-800"}`}
+      className={`w-full py-20 px-10 lg:px-0 ${!reverse && "bg-gray-800"}`}
       id={id}
     >
       <div
@@ -38,7 +38,9 @@ const Section: FC<Props> = ({
           />
         )}
         <div className="flex flex-col items-center md:items-start gap-4">
-          <h2 className="text-6xl md:text-4xl font-bold">{title}</h2>
+          <h2 className="text-center md:text-left text-5xl md:text-4xl font-bold">
+            {title}
+          </h2>
           {image && (
             <Image
               src={image}
