@@ -1,113 +1,95 @@
-import Image from 'next/image'
+"use server";
 
-export default function Home() {
+import Nav from "./components/atoms/Nav";
+import Hero from "./components/molecules/Hero";
+import Section from "./components/atoms/Section";
+
+export default async function Component() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+    <div className="flex flex-col min-h-screen bg-gray-900 text-white font-sans">
+      <Nav />
+      <main className="flex-1">
+        <Hero />
+        <Section title="Origin" id="origin" image="/images/branding3.jpg">
+          <p>
+            $TOLY was born out of a conversation between two friends who have
+            been in the Solana ecosystem for a few years now. Around the time, a
+            few tokens were launched, but none had fully decentralized
+            distribution. As an experiment and a point of curiosity in exploring
+            the token program library, the two friends created and launched
+            $TOLY. They self-seeded the LP, immediately burned the LP tokens,
+            and revoked mint authority.
+            <br />
+            <br />
+            From the onset, $TOLY was meant for the people to honor the founder
+            of Solana,{" "}
+            <code className="bg-gray-600">
+              <a
+                href="https://twitter.com/aeyakovenko"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Anatoly Yakovenko
+              </a>
+            </code>
+            .
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        </Section>
+        <Section title="Facts" id="facts" image="/images/branding7.jpg" reverse>
+          <ol className="max-w-4xl mx-auto space-y-4 text-justify">
+            <li key={1}>
+              The developers own zero supply of TOLY. This was launched as an
+              experiment by the devs.
+            </li>
+            <li key={2}>
+              The developers have very little to no involvement in TOLY&apos;s
+              direction. It is now entirely community-run, with a few members
+              rising to drive the direction.
+            </li>
+            <li key={3}>
+              $TOLYcoin was the first TOLY native SPL launched. The developers
+              were able to mine the custom token address{" "}
+              <code className="bg-gray-600">
+                <a
+                  href="https://explorer.solana.com/address/to1yVXiNRMVVgS8i54Yjj3xB51MTorFrCMz7N8cirbK"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  to1yVXiNRMVVgS8i54Yjj3xB51MTorFrCMz7N8cirbK
+                </a>
+              </code>{" "}
+              to pay homeage to Anatoly.
+            </li>
+            <li key={4}>
+              Anatoly himself has no affiliation with TOLY coin. The entire
+              progress, marketing, and community managment of TOLY is funded by
+              the community itself.
+            </li>
+          </ol>
+        </Section>
+        <Section
+          title="Tokenomics"
+          id="tokenomics"
+          image="/images/branding2.jpg"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+          <div className="flex flex-col space-y-4 text-justify">
+            <p>Total supply: 500,000,000</p>
+            <p>Fair Launched: 250,000,000</p>
+            <p>Airdropped: 150,000,000</p>
+            <p>
+              100,000,000 $TOLY was attempted to be burned on [DATE HERE].
+              However, the main developer made a mistake and accidentally sent
+              it to trash.sol. That led to a short-term sell-off. Today, $TOLY
+              is now fully distributed and decentralized with little wallet
+              concentration. The founding developers did not and do not hold
+              $TOLY.
+            </p>
+          </div>
+        </Section>
+      </main>
+      <footer className="px-10 lg:px-0 py-2 flex justify-center items-center border-t border-gray-800">
+        <p className="text-sm">© TOLY</p>
+      </footer>
+    </div>
+  );
 }
